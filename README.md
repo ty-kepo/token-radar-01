@@ -9,10 +9,10 @@ A Node 22 program (`main.ts`, standard library only, no network) that builds a t
 ## Run it
 
 ```sh
-node main.ts
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input ../kit/input/snapshot.json
 ```
 
-It writes `board.json` (200 rows), the dashboard data, `dashboard/`, `screenshots/` and `dossier.json` to `out/`. Running it twice produces byte-identical output.
+It writes `board.json` (200 rows), the dashboard data, `dashboard/`, `screenshots/` and `dossier.json` to `out/` (in the grader's container it writes to `/output` and reads `/input/snapshot.json`). Running it twice produces byte-identical output.
 
 ## Model
 
